@@ -1,0 +1,8 @@
+In map function of java script is the initialise of key-value pairs , whatever types of argument if you have passes through.
+
+const items = [card, notebooks , mouse , keyboard, biscuit]
+
+const item = items.map(index, arr){
+  return items;
+}
+
