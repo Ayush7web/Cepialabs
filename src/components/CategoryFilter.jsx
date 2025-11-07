@@ -18,17 +18,17 @@ export default function CategoryFilter({
         All
       </button>
 
-      {categories.map((c) => (
+      {categories.map((d) => (
         <button
-          key={c.slug}
-          onClick={() => onSelect(c.slug)}
+          key={d.slug}
+          onClick={() => onSelect(d.slug)}
           className={`px-3 py-1 rounded-lg border ${
-            selected === c
+            selected === d
               ? "bg-indigo-50 border-indigo-400"
               : "bg-white dark:bg-gray-800"
           }`}
         >
-          {c.name}
+          {d.name}
         </button>
       ))}
     </div>

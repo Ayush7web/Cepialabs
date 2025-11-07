@@ -115,14 +115,17 @@ export default function App() {
     setSkip(0);
   }
 
-  function toggleFavorite(id) {
+  function toggleFavorite(id){
     setFavorites((prev) => {
       const has = prev.includes(id);
-      const next = has ? prev.filter((x) => x !== id) : [id, ...prev];
-      localStorage.setItem("favorites", JSON.stringify(next));
+      const next = has ? prev.filter((x) => x !== id) : [id , ...prev]; 
+      localStorage.getItem("favorite" , JSON.stringify(next));
       return next;
     });
   }
+
+
+
 
   return (
     <div className="min-h-screen  p-6">
@@ -139,7 +142,7 @@ export default function App() {
               {dark ? "light" : "dark"}
             </button>
 
-            <div className="text-sm text-gray-500">
+            <div className="text-sm text-gray-500 cursor-pointer">
               Favorites: {favorites.length}
             </div>
           </div>
